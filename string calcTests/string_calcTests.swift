@@ -9,18 +9,25 @@ import XCTest
 @testable import string_calc
 
 class string_calcTests: XCTestCase {
+    var sut: StringCalculator!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        sut = StringCalculator()
     }
 
     func test_emptyStringReturnZero() {
         let result = sut.add("")
         XCTAssertEqual(result, 0)
+    }
+
+}
+
+
+class StringCalculator {
+
+    func add(_ str: String) -> Int {
+        return 0
     }
 
 }
